@@ -1,30 +1,28 @@
 const express = require('express');
-const PORT = 8080;
+const mongoose = require('mongoose');
 
+// Load environment variables
+require('dotenv').config();
+
+// Initiate express app
 const app = express();
+
+mongoose.connect(process.env.REMOTE_DATABASE_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
+});
+
+const imagesRoutes = require('./api/v1/routes/images');
+
+// Middleware
 app.use(express.json())
-app.get('/test', (req,res) => {
-    res.status(200).send({
-        test: 'TestLol',
-        name: 'san'
-        
-    })
-app.post('/test/:id', (req, res) => {
-    const { id } = req.params;
-    const { logo } = req.body;
 
-    if (!logo) {
-        res.status(418).send({message: 'Nothinglol' })
-    }
-    res.send({
-        test: `logo = ${logo} and ID = ${id} `
 
-    })
+app.use('/api/v1/images', imagesRoutes);
 
-});
-
-});
 app.listen(
-    PORT,
-    () => console.log(`dis working ( http://localhost:${PORT} )`)
+    process.env.PORT,
+    () => console.log(`dis working ( http://localhost:${process.env.PORT} )`)
 );

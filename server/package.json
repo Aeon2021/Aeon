@@ -4,7 +4,9 @@
   "description": "Back-end API/Server for Aeon application",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.15"
   },
   "devDependencies": {},
   "author": "",
