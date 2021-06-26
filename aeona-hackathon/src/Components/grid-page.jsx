@@ -20,6 +20,8 @@ class GridPage extends React.Component {
         return (
             <Container>
 
+            <h1> ❤---------- YOUR MEMORIES ----------❤</h1>
+
             <Row xs="4" sm="3" className="gridPadding">
               <Col><img src={ManOnPlank} width="100%" style={{ borderRadius: "20px" }}/></Col>
               <Col><img src={MountainRock} width="100%" style={{ borderRadius: "20px" }}/></Col>
