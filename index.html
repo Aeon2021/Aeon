@@ -1,154 +1,77 @@
-<style>
-.ball {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 50%;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  -webkit-animation: move-map 20s infinite linear;
-  -moz-animation: move-map 20s infinite linear;
-  -o-animation: move-map 20s infinite linear;
-  -ms-animation: move-map 20s infinite linear;
-  animation: move-map 20s infinite linear;
-}
+<!DOCTYPE html>
+<html>
+    <head>   
+        <link rel="stylesheet" href="ball.css">
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="css.css">
+    </head>
+    <body class="w3-light-grey">
+        <!-- Sidebar/menu -->
+        <nav class="w3-sidebar w3-bar-block w3-black w3-animate-right w3-top w3-text-light-grey w3-large" style="z-index: 3; width: 250px; font-weight: bold; display: none; right: 0px;" id="mySidebar">
+            <a href="javascript:void()" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-32">CLOSE</a> 
+            <a href="https://www.w3schools.com/w3css/tryw3css_templates_portfolio3.htm#" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">PORTFOLIO</a> 
+            <a href="https://www.w3schools.com/w3css/tryw3css_templates_portfolio3.htm#about" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">ABOUT ME</a> 
+            <a href="https://www.w3schools.com/w3css/tryw3css_templates_portfolio3.htm#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-center w3-padding-16">CONTACT</a>
+          </nav>
 
-.ball:before {
-  content: "";
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset;
-  z-index: 2;
-}
+          <!-- Top menu on small screens -->
+          <header class="w3-container w3-top w3-white w3-xlarge w3-padding-16">
+            <span class="w3-left w3-padding">AEONA | YOUR EXPERIENCES</span>
+            <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+          </header>
 
-.ball:after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-filter: blur(0);
-  opacity: 0.3;
-  background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%);
-}
+          <!-- Overlay effect when opening sidebar on small screens -->
+          <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor: pointer; display: none;" title="close side menu" id="myOverlay"></div>
+          
+        <div class="w3-main w3-content" style="max-width: 100%; margin-top: 83px;">
+            <section class="stage">
+                <span class="ball" style="float: left; background: url(pic.jpg) no-repeat; background-size: auto 100%;" class="test" onclick="onClick(this)"><span class="shadow"></span></span>
+            </section>
 
-.ball .shadow {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-  -webkit-transform: rotateX(90deg) translateZ(-150px);
-  -moz-transform: rotateX(90deg) translateZ(-150px);
-  -ms-transform: rotateX(90deg) translateZ(-150px);
-  -o-transform: rotateX(90deg) translateZ(-150px);
-  transform: rotateX(90deg) translateZ(-150px);
-  z-index: -1;
-}
-body {
-  margin: 20px auto;
-  background: linear-gradient(to bottom, rgba(100, 100, 100, 0.2) 0%, rgba(255, 255, 255, 0.5) 40%, #ffffff 100%);
-  background-repeat: no-repeat;
-}
+            <section class="stage">
+                <span class="ball" style="float: right; background: url(pic2.jpg) no-repeat; background-size: auto 100%;" class="test" onclick="onClick(this)"><span class="shadow"></span></span>
+            </section>
 
-.stage {
-  width: 300px;
-  height: 300px;
-  display: inline-block;
-  margin: 20px;
-  -webkit-perspective: 1200px;
-  -moz-perspective: 1200px;
-  -ms-perspective: 1200px;
-  -o-perspective: 1200px;
-  perspective: 1200px;
-  -webkit-perspective-origin: 50% 50%;
-  -moz-perspective-origin: 50% 50%;
-  -ms-perspective-origin: 50% 50%;
-  -o-perspective-origin: 50% 50%;
-  perspective-origin: 50% 50%;
-}
+            <section class="stage">
+                <span class="ball" style="float: right; background: url(pic2.jpg) no-repeat; background-size: auto 100%;" class="test" onclick="onClick(this)"><span class="shadow"></span></span>
+            </section>
 
-@-moz-keyframes move-map {
-    0% {
-        background-position: -150px 0;
-    }
+            <section class="stage">
+                <span class="ball" style="float: right; background: url(pic2.jpg) no-repeat; background-size: auto 100%;" class="test" onclick="onClick(this)"><span class="shadow"></span></span>
+            </section>
 
-    50% {
-        background-position: 0 0;
-    }
+            <section class="stage">
+                <span class="ball" style="float: left; background: url(pic.jpg) no-repeat; background-size: auto 100%;" class="test" onclick="onClick(this)"><span class="shadow"></span></span>
+            </section>
 
-    100% {
-        background-position: -150px 0;
-    }
-}
+            <!-- Modal for full size images on click-->
+            <div id="modal01" class="w3-modal w3-black" style="padding-top: 0px; display: none;" onclick="this.style.display=&#39;none&#39;">
+                <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image" src="pic.jpg">
+                    <p id="caption">A girl, and a train passing</p>
+                </div>
+            </div>
 
-@-webkit-keyframes move-map {
-    0% {
-        background-position: -150px 0;
-    }
+            <script>
+                function w3_open() {
+                  document.getElementById("mySidebar").style.display = "block";
+                  document.getElementById("myOverlay").style.display = "block";
+                }
 
-    50% {
-        background-position: 0 0;
-    }
+                function w3_close() {
+                  document.getElementById("mySidebar").style.display = "none";
+                  document.getElementById("myOverlay").style.display = "none";
+                }
 
-    100% {
-        background-position: -150px 0;
-    }
-}
-
-
-@-o-keyframes move-map {
-    0% {
-        background-position: -150px 0;
-    }
-
-    50% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -150px 0;
-    }
-}
-
-@-ms-keyframes move-map {
-    0% {
-        background-position: -150px 0;
-    }
-
-    50% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -150px 0;
-    }
-}
-
-@keyframes move-map {
-    0% {
-        background-position: -150px 0;
-    }
-
-    50% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: -150px 0;
-    }
-}
-
-</style>
-
-
-<section class="stage">
-    <span class="ball" style="float: left; background: url(pic.jpg) no-repeat; background-size: auto 100%;"><span class="shadow"></span></span>
-    <span class="ball" style="float: right; background: url(pic2.jpg) no-repeat; background-size: auto 100%;"><span class="shadow"></span></span>
-</section>
+                // Modal Image Gallery
+                function onClick(element) {
+                    document.getElementById("img01").src = element.src;
+                    document.getElementById("modal01").style.display = "block";
+                    var captionText = document.getElementById("caption");
+                    captionText.innerHTML = element.alt;
+                }
+            </script>
+        </div>
+    </body>
+</html>
