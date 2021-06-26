@@ -1,0 +1,12 @@
+{
+  "name": "aeon-express-server",
+  "version": "1.0.0",
+  "description": "Back-end API/Server for Aeon application",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "GPL-3.0"
+}
