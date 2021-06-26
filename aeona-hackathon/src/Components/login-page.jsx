@@ -16,11 +16,11 @@ class LoginPage extends React.Component {
                             <Form>
 
                                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0 loginPadding" >
-                                    <Input type="email" name="email" id="exampleEmail" placeholder="USERNAME" style={{height: '45px', borderRadius: '30px', width: '80%'}} />
+                                    <Input type="email" name="email" id="exampleEmail" placeholder="USERNAME" style={{height: '45px', borderRadius: '30px', width: '100%'}} />
                                 </FormGroup>
 
                                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0 loginPadding">
-                                    <Input type="password" name="password" id="examplePassword" placeholder="PASSWORD" style={{height: '45px', borderRadius: '30px', width: '80%'}} />
+                                    <Input type="password" name="password" id="examplePassword" placeholder="PASSWORD" style={{height: '45px', borderRadius: '30px', width: '100%'}} />
                                 </FormGroup>
                                 
                                 <div className="loginPadding buttonPadding">

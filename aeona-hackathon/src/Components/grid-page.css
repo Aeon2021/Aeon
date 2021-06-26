@@ -1,0 +1,10 @@
+body {
+    background-image: url(../Assets/Dashboard-Background.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+.gridPadding {
+  padding-top: 2%;
+}
+ 
