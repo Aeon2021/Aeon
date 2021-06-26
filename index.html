@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Curve test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="beach" src="beach.jpg">
+        </a-assets>
+
+        <a-curvedimage 
+            src="#beach"
+            position= "0 1.5 -3"
+            width = "1.20"
+            height= "0.788"
+            theta-length="200"
+            scale="3 3 3"
+            theta-start="90"
+            radius="0.5"
+
+        
+        >
+
+        </a-curvedimage>
+
+
+        
+    </a-scene>
+    
+</body>
+</html>
