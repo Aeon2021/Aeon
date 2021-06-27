@@ -24,7 +24,7 @@ const Dashboard = () => {
 
           <Row xs="4" sm="3" className="gridPadding">
             <Col><a href="#"><img src={ManOnPlank} width="100%" style={{ borderRadius: "20px" }} onclick="onClick(this)"/></a></Col>
-            <Col><a href="test.html"><img src={MountainRock} width="100%" style={{ borderRadius: "20px" }}/></a></Col>
+            <Col><a href="/imageview"><img src={MountainRock} width="100%" style={{ borderRadius: "20px" }}/></a></Col>
             <Col><img src={Mountain} width="100%" style={{ borderRadius: "20px" }}/></Col>
           </Row>
 

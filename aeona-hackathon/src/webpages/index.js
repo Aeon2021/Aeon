@@ -10,6 +10,7 @@ import Home from './home';
 import Login from './login';
 import Upload from './upload';
 import Dashboard from './dashboard';
+import ImageView from './imageview';
 
 const Webpages = () => {
     return(
@@ -18,6 +19,7 @@ const Webpages = () => {
             <Route path = "/login" component = {Login} />
             <Route path = "/upload" component = {Upload} />
             <Route path = "/dashboard" component = {Dashboard} />
+            <Route path = "/imageview" component = {ImageView} />
         </Router>
     );
 };

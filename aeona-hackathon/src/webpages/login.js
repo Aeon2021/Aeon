@@ -12,8 +12,7 @@ const Login = () => {
                     <div className="center">
                         <h1>AEONA LOGIN</h1>
                         <div>
-                            <Form>
-
+                            <Form action="/dashboard">
                                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0 loginPadding" >
                                     <Input type="email" name="email" id="exampleEmail" placeholder="USERNAME" style={{height: '45px', borderRadius: '30px', width: '100%'}} />
                                 </FormGroup>
@@ -23,9 +22,8 @@ const Login = () => {
                                 </FormGroup>
 
                                 <div className="loginPadding buttonPadding">
-                                    <Button style={{height: '45px', borderRadius: '30px', width: '80%', backgroundColor: '#4791ff', borderColor: '#4791ff'}}>SUBMIT</Button>
+                                    <a href="/dashboard"><Button style={{height: '45px', borderRadius: '30px', width: '80%', backgroundColor: '#4791ff', borderColor: '#4791ff'}}>SUBMIT</Button></a>
                                 </div>
-
                             </Form>
                         </div>
                     </div>
