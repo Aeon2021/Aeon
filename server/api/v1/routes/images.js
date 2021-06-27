@@ -9,7 +9,10 @@ const router = Router();
 
 router.get('/all', (req, res) => {
   Image.find({}, (err, images) => {
-    res.json({ data: images });
+    if (err) res.status(500).json({ error: err });
+    if (images) {
+      res.json({ data: images });
+    }
   });
 });
 
