@@ -1,16 +1,12 @@
 import React from 'react';
-// import './App.css';
-// import LoginPage from './Components/login-page';
-import GridPage from './Components/grid-page'; 
 
+import './App.css';
+import Webpages from './webpages';
 function App() {
   return (
     <div>
-      {/* <LoginPage /> */}
-      <GridPage />
+      <Webpages />
     </div>
-
   );
 }
-
 export default App;
