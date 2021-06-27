@@ -1,15 +1,28 @@
 body {
-    background-image: url(../Assets/Dashboard-Background.svg);
+    /* background-image: url(../Assets/Dashboard-Background.svg);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%; */
   }
 
 .gridPadding {
   padding-top: 2%;
+}
+
+.dashbg{
+  background-image: url(../Assets/Dashboard-Background.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
  
 
 h1 {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.test{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
 }

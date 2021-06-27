@@ -124,29 +124,33 @@ class Upload extends Component {
 
   render() {
     return (
-      <div className="Upload centerItem">
-        <Card style={{ width: '30%', height: '40%', borderRadius: '20px', borderColor:"#17bdff" }}>
-        <h2 className="Title centerText">Upload Files</h2>
-        <div className="Content">
-          <div className="uploadPadding">
-              <Dropzone
-                onFilesAdded={this.onFilesAdded}
-                disabled={this.state.uploading || this.state.successfullUploaded}
-              />
-          </div>
-          <div className="Files">
-            {this.state.files.map(file => {
-              return (
-                <div key={file.name} className="Row">
-                  <span className="Filename">{file.name}</span>
-                  {this.renderProgress(file)}
-                </div>
-              );
-            })}
+      <div className="uploadbg">
+        <div className="bgpadding">
+          <div className="Upload centerItem bgpadding">
+            <Card style={{ width: '30%', height: '40%', borderRadius: '20px', borderColor:"#17bdff" }}>
+            <h2 className="Title centerText">Upload Files</h2>
+            <div className="Content">
+              <div className="uploadPadding">
+                  <Dropzone
+                    onFilesAdded={this.onFilesAdded}
+                    disabled={this.state.uploading || this.state.successfullUploaded}
+                  />
+              </div>
+              <div className="Files">
+                {this.state.files.map(file => {
+                  return (
+                    <div key={file.name} className="Row">
+                      <span className="Filename">{file.name}</span>
+                      {this.renderProgress(file)}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="Actions">{this.renderActions()}</div>
+            </Card>
           </div>
         </div>
-        <div className="Actions">{this.renderActions()}</div>
-        </Card>
       </div>
     );
   }

@@ -17,31 +17,33 @@ import ChildMount from '../Assets/GridPhotos/mountain-child.jpeg';
 
 const Dashboard = () => {
     return (
+      <div className="dashbg">
         <Container>
 
-        <h1> ❤---------- YOUR MEMORIES ----------❤</h1>
+          <h1> ❤---------- YOUR MEMORIES ----------❤</h1>
 
-        <Row xs="4" sm="3" className="gridPadding">
-          <Col><img src={ManOnPlank} width="100%" style={{ borderRadius: "20px" }}/></Col>
-          <Col><img src={MountainRock} width="100%" style={{ borderRadius: "20px" }}/></Col>
-          <Col><img src={Mountain} width="100%" style={{ borderRadius: "20px" }}/></Col>
-        </Row>
+          <Row xs="4" sm="3" className="gridPadding">
+            <Col><a href="#"><img src={ManOnPlank} width="100%" style={{ borderRadius: "20px" }} onclick="onClick(this)"/></a></Col>
+            <Col><a href="test.html"><img src={MountainRock} width="100%" style={{ borderRadius: "20px" }}/></a></Col>
+            <Col><img src={Mountain} width="100%" style={{ borderRadius: "20px" }}/></Col>
+          </Row>
 
-        <Row xs="4" className="gridPadding">
-          <Col><img src={JeansFamily} width="100%" style={{ borderRadius: "20px" }}/></Col>
-          <Col><img src={Lavender} width="100%" style={{ borderRadius: "20px" }}/></Col>
-          <Col><img src={PeaceWoman} width="100%" style={{ borderRadius: "20px" }}/></Col>
-          <Col><img src={SnowyHighs} width="100%" style={{ borderRadius: "20px" }}/></Col>
-        </Row>
+          <Row xs="4" className="gridPadding">
+            <Col><img src={JeansFamily} width="100%" style={{ borderRadius: "20px" }}/></Col>
+            <Col><img src={Lavender} width="100%" style={{ borderRadius: "20px" }}/></Col>
+            <Col><img src={PeaceWoman} width="100%" style={{ borderRadius: "20px" }}/></Col>
+            <Col><img src={SnowyHighs} width="100%" style={{ borderRadius: "20px" }}/></Col>
+          </Row>
 
 
-        <Row xs="4" sm="3" className="gridPadding">
-            <Col><img src={Person4} width="100%" style={{ borderRadius: "20px" }}/></Col>
-            <Col><img src={SnowwyRelf} width="100%" style={{ borderRadius: "20px" }}/></Col>
-            <Col><img src={ChildMount} width="100%" style={{ borderRadius: "20px" }}/></Col>
-        </Row>  
+          <Row xs="4" sm="3" className="gridPadding">
+              <Col><img src={Person4} width="100%" style={{ borderRadius: "20px" }}/></Col>
+              <Col><img src={SnowwyRelf} width="100%" style={{ borderRadius: "20px" }}/></Col>
+              <Col><img src={ChildMount} width="100%" style={{ borderRadius: "20px" }}/></Col>
+          </Row>  
 
-      </Container>
+        </Container>
+      </div>
     );
 };
 export default Dashboard;
