@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dropzone from "../dropzone/dropzone";
 import "./upload.css";
 import Progress from "../progress/progress";
+import { Card, Button } from 'reactstrap';
 
 class Upload extends Component {
   constructor(props) {
@@ -123,14 +124,15 @@ class Upload extends Component {
 
   render() {
     return (
-      <div className="Upload">
-        <span className="Title">Upload Files</span>
+      <div className="Upload centerItem">
+        <Card style={{ width: '30%', height: '40%', borderRadius: '20px', borderColor:"#17bdff" }}>
+        <h2 className="Title centerText">Upload Files</h2>
         <div className="Content">
-          <div>
-            <Dropzone
-              onFilesAdded={this.onFilesAdded}
-              disabled={this.state.uploading || this.state.successfullUploaded}
-            />
+          <div className="uploadPadding">
+              <Dropzone
+                onFilesAdded={this.onFilesAdded}
+                disabled={this.state.uploading || this.state.successfullUploaded}
+              />
           </div>
           <div className="Files">
             {this.state.files.map(file => {
@@ -144,6 +146,7 @@ class Upload extends Component {
           </div>
         </div>
         <div className="Actions">{this.renderActions()}</div>
+        </Card>
       </div>
     );
   }

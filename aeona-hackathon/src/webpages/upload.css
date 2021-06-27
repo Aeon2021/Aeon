@@ -95,3 +95,18 @@ button:disabled {
   background: rgb(189, 189, 189);
   cursor: default;
 }
+
+.centerText {
+  text-align: center;
+}
+
+.centerItem {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 15%;
+}
+
+.uploadPadding {
+  padding-left: 3%;
+}
